@@ -1,0 +1,101 @@
+* Publish
+#+BEGIN_EXAMPLE
+<me/yiddi/git_repos/blog_cache/
+ css/
+ 函数式编程/
+   css/
+   初探<<群论>>/
+   index.org
+   theindex.inc
+   theindex.org
+ 大数据/
+   css/
+ 数据结构与算法/
+   css/
+   加州伯克利CS61笔记/
+ 机器学习/
+   css/
+   个人深度学习论文(草稿)/
+   加州伯克利CS189笔记/
+   台大MLDS作业/
+   台大MLDS笔记/
+   斯坦福CS20si笔记/
+   机器学习工具库笔记/
+ 生活札记/
+   css/
+   四种女人.org
+   时间就像一根筷子.org
+   生活与信仰.org
+   自己写的春联.org
+   闲来打油诗之一.org
+   闲来打油诗之三.org
+   闲来打油诗之二.org
+   闲来打油诗之四.org
+
+#+END_EXAMPLE
+
+#+BEGIN_SRC emacs-lisp :tangle yes
+(require ob-async)
+#+END_SRC
+
+  #+header: :var tgt=
+  #+header: :var src=
+
+  #+BEGIN_SRC emacs-lisp :tangle yes :async t
+    (setq org-publish-project-alist
+          `(
+            ("yiddi-article"
+             :base-directory "/home/yiddi/git_repos/blog_cache/"
+             :publishing-directory "/home/yiddi/YiddishKop.github.io/"
+             :base-extension "org"
+
+             :recursive t
+             :html-head , yiddi-website-html-blog-head
+             :publishing-function org-html-publish-to-html
+             :headline-levels 4       ; Just the default for this project.
+             :auto-preamble t
+             :exclude-tags ("ol" "noexport")
+             :section-numbers t
+             ;; :html-preamble ,zilongshanren-website-html-preamble
+             :author "yiddi"
+             :email "yiddishkop@gmail.com"
+             :auto-sitemap t          ; Generate sitemap.org automagically...
+             :html-link-home "/index.html"
+             :html-link-up "index.html"
+             ;; :makeindex t
+             :sitemap-filename "index.org" ; ... call it sitemap.org (it's the default)...
+             :sitemap-title "Articles"     ; ... with title 'Sitemap'.
+             :sitemap-sort-files alphabetically
+             :sitemap-file-entry-format "%t" ; %d to output date, we don't need date here
+             )
+            ("yiddi-static"
+             :base-directory "/home/yiddi/git_repos/blog_cache/"
+             :publishing-directory "/home/yiddi/YiddishKop.github.io/"
+             :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+             :recursive t
+             :publishing-function org-publish-attachment
+             )
+            ("yiddi-blog" :components ("yiddi-article" "yiddi-static"))
+            )
+          )
+  #+END_SRC
+
+  #+RESULTS:
+  | yiddi-article | :base-directory | /home/yiddi/git_repos/blog_cache/ | :publishing-directory | /home/yiddi/YiddishKop.github.io/ | :base-extension | org  | :recursive | t    | :html-head | <link rel='stylesheet' href='css/site.css' type='text/css'/> | :publishing-function | org-html-publish-to-html | :headline-levels |   4 | :auto-preamble | t | :exclude-tags        | (ol noexport)          | :section-numbers | t | :author | yiddi | :email | yiddishkop@gmail.com | :auto-sitemap | t | :html-link-home | /index.html | :html-link-up | index.html | :sitemap-filename | index.org | :sitemap-title | Articles | :sitemap-sort-files | alphabetically | :sitemap-file-entry-format | %t |
+  | yiddi-static  | :base-directory | /home/yiddi/git_repos/blog_cache/ | :publishing-directory | /home/yiddi/YiddishKop.github.io/ | :base-extension | css\ | js\        | png\ | jpg\       | gif\                                                         | pdf\                 | mp3\                     | ogg\             | swf | :recursive     | t | :publishing-function | org-publish-attachment |                  |   |         |       |        |                      |               |   |                 |             |               |            |                   |           |                |          |                     |                |                            |    |
+  | yiddi-blog    | :components     | (yiddi-article yiddi-static)      |                       |                                   |                 |      |            |      |            |                                                              |                      |                          |                  |     |                |   |                      |                        |                  |   |         |       |        |                      |               |   |                 |             |               |            |                   |           |                |          |                     |                |                            |    |
+
+  #+BEGIN_SRC emacs-lisp :tangle yes :async t
+(org-publish-project "yiddi-blog")
+  #+END_SRC
+
+  #+RESULTS:
+
+  #+BEGIN_SRC emacs-lisp :tangle yes
+      ;;  set this variable t will make org publish the modified file
+      ;;  set this variable nil will make org publish the all file
+      (setq org-publish-use-timestamps-flag t)
+  #+END_SRC
+
+  #+RESULTS:
+  : t

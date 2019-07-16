@@ -1,0 +1,56 @@
+*** 数据科学软件工程师 @中兴,南京
+    _Tensorflow, Keras, Spark, SparkML, Scikit-Learn_
+
+    /03-2017 ~ present/
+
+    /PROJ: 中兴 IPTV GoldenData, 大数据处理分析平台/
+
+    - 根据近期 paper(arXiv), 使用
+      *Tensorflow/Keras/Scikit-Learn/Numpy/Scipy/Pandas/Matplotlib* 预研机器学
+      习算法, (包括,不限于:
+       -  *GAN* series,
+       -  *Attention based RNN* for seq2seq,
+       -  *CNN* enhanced by *spatial transformer layer*,
+       -  *VAE* for noise tolerance image classification,
+       -  Deep Q-Learning for *overcoming discrete optimization problem of Gradient Descent*,
+       -  *Aggregation Model* like Xgboost, GBDT,
+       -  *HMM/CRF* for sequence labeling).
+    - 根据具体项目和应用场景, 参与机器学习 *算法模型评估和选择*, 撰写高可解释性
+      说明文档.
+    - 基于 *SparkML*, 使用 *K-means, LR, GBDT, tSNE, PCA* 等算法模型对 IPTV
+      用户购买行为进行可视化/特征提取/分析预测.
+    - 使用 *Spark RDD* 实现 IPTV 服务器后端用户 log 数据提取/分析/预测, 提升原
+      系统 MapReduce 性能.
+    - 独立完成基于 *scala* 开发 JSON 与 XML 文件解析模块, 解析用户请求消息并转
+      换成 SparkSQL 语句, 完成数据查询.
+    - 使用 *SparkSQL* 完成部分用户 log 数据批量建/查/删/改工作. 并结合 *Data
+      Frame, Pair RDD* 优化原有 Hadoop 架构下视频影像产品数据 ELT 操作.
+    - 维护部分 SBT 脚本, 完成工程部署/构建
+
+*** 大数据工程师 @中兴,南京
+ _Spark, Hadoop_ .
+
+ /03-2016 ~ 12-2016/ .
+
+ /PROJ: 电信光猫网络服务器, 基于事件驱动实时管理/ .
+
+    - 使用 *Spark Core, Spark Streaming, Spark SQL*, 参与实现实时流数据 ETL 模型,
+      提供实时数据用于数据分析.
+    - 参与实现基于远程过程调用 (RPC) 的 *高并发* API, 用于管理 *100w+* 电信光猫
+      的连接/业务请求/错误日志上传.
+    - 参与定位和修正部分 Spark 问题.
+
+*** 高级软件工程师 @中兴,南京
+    _Embedded OS, C_ .
+
+    /01/2015 ~ 02/2016/ .
+
+    /PROJ: 中兴 GPON'9112/9113'光网络终端系统开发/ .
+
+    - 提出并使用 python 独立完成基于 secureCRT 的 *全模块自动测试* 框架, 帮助测
+      试部节省大量测试时间.
+    - 参与 bootloader 修改.
+    - 参与完成 GPON9112/9113 路由子系统 API 的编写.
+    - 参与完成 GPON9112/9113 SDRAM 缓存系统内存管理模块 API 编写
+    - 参与完成 tr069 协议代码的实现
+    - 编写并维护 tr069 模块 makefile 工程文件

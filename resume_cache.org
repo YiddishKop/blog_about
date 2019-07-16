@@ -1,0 +1,54 @@
+
+*** Data Engineer - Spark, SparkML
+
+    /Time : 01/2017 to Present, *ZTE* - NanJing/ .
+
+    /Description : ZTE IPTV 'ZXCLOUD GoldenData' Big Data analytics platform./
+
+    - Migrated MapReduce jobs into *Spark RDD* transformations using Scala
+    - Worked with analytics team to build statistical models including *K-means, LR, GBDT* using *SparkML*
+    - Implemented Spark using *SparkSQL* for faster processing of data
+    - Developed Spark jobs to parse the *JSON* and *XML* data
+    - Optimizing of existing algorithms in Hadoop using Spark Context, *SparkSQL*, *Data Frame* and *Pair RDD*.
+    - Used *SBT* scripts to fetch, build, deploy application to development enviroment
+
+*** Senior Software Developer - Embedded OS, C, Assembly Language
+
+    /Time : 01/2015 to 12/2016, *ZTE* - NanJing/ .
+
+    /Description : ZTE OS development of 'T800' Router, 'GPON9112/9113' Optical Network Terminals/
+
+    - Refactored the existing *bootloader* using assembly language
+    - Completed API of the Routing Subsystem
+    - Completed API of SDRAM cache memory management
+    - Proposed and completed an *automatically testing framework* under secureCRT using python
+    - Completed coding of *AIO(Assynchronized Non-blocking I/O)* protocal --- tr069
+    - Maintained makefile of project
+
+*** J2EE Developer - Hibernate, Spring, Java
+
+    /Time : 07/2009 to 12/2014, *DaKun management consultants,inc* - ShenZhen/ .
+
+    /Description : DaKun is a start-up focuses on company management consulting, this project is a HR management system/
+
+    - Website persistence layer development using *Hibernate* framework
+    - Developed database schema and *SQL* queries for querying, inserting and managing database
+    - Implemented various design patterns in the project such as *Builder, Singleton, Proxy patterns*.
+    - Performed unit testing using *JUnit*
+
+** Senior Software Developer @ [[https://www.zte.com.cn/][ZTE, NanJing]]
+   _Embedded OS, C_
+
+   /01/2015 ~ 12/2016/ .
+
+   /PROJ: ZTE OS development of 'GPON9112/9113' Optical Network Terminals/
+
+   #+REVEAL: split
+   - Refactored the existing _*bootloader*_ using assembly language
+   - Completed API of the Routing Subsystem
+   - Completed API of SDRAM cache memory management
+   - Proposed and completed an _*automatically testing framework*_ under
+     secureCRT using python
+   - Completed coding of _*AIO(Assynchronized Non-blocking I/O)*_ protocal ---
+     tr069
+   - Maintained makefile of project
